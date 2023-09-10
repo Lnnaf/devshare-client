@@ -1,0 +1,40 @@
+/* button */
+.btn {
+  @apply rounded-lg px-4 py-2 border-2 duration-300
+}
+/* button with outline */
+.primary-outline  {
+  @apply border-blue-500 text-blue-500 hover:bg-blue-600 hover:text-blue-100
+}
+
+.success-outline  {
+  @apply border-green-700 text-green-700 hover:bg-green-700 hover:text-green-100
+}
+
+.danger-outline  {
+  @apply border-red-600 text-red-600 hover:bg-red-600 hover:text-red-100
+}
+
+.warn-outline {
+  @apply border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-yellow-100
+}
+
+/* button with tag */
+.primary {
+  @apply bg-blue-500 text-blue-100 hover:bg-blue-600
+}
+
+.success {
+  @apply bg-green-700 text-green-100 hover:bg-green-800
+}
+
+.danger {
+  @apply bg-red-600 text-red-100 hover:bg-red-700
+}
+
+.warn {
+  @apply bg-yellow-500 hover:bg-yellow-600
+}
+
+
+
