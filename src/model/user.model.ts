@@ -1,5 +1,5 @@
 // Define an interface for User
-interface User {
+export interface User {
   id: number;
   displayName: string;
   username: string;

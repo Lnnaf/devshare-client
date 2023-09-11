@@ -7,7 +7,7 @@ interface PostLinkProps {
 
 const PostLink: FunctionComponent<PostLinkProps> = (props) => {
 	return (
-		<Link href={`/post/${props.post_id}`}>
+		<Link href={`/posts/${props.post_id}`}>
 			<p>View Post {props.post_id}</p>
 		</Link>
 	);

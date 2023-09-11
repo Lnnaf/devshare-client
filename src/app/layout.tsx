@@ -28,7 +28,7 @@ export default function RootLayout({
 					{/* left panel */}
 					<div className="flex-initial lg:w-1/4"></div>
 					{/* center panel */}
-					<div className="bg-[#caf0f8] xl:w-10/12 w-full">
+					<div className="xl:w-10/12 w-full">
 						{children}
 					</div>
 					{/* right paenl */}

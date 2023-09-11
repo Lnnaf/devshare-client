@@ -4,3 +4,10 @@
 
 @import 'styles/button.css';
 
+.drop-shadow {
+  @apply shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]
+}
+
+.avatar-sm {
+  @apply inline-block h-12 w-12 rounded-full ring-2 ring-white
+}
