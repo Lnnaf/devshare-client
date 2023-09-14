@@ -1,5 +1,5 @@
 // apiService.ts
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 // dotenv.config(); // Load environment variables
 
@@ -16,10 +16,10 @@ enum API_ENDPOINTS {
   USERS = '/users',
   POSTS_NEWEST = '/posts/newest',
   POST_DETAIL = '/posts/:post_id',
-  POST_OUTSTANDING = '/posts/mostview'
+  POST_OUTSTANDING_CATEGORY = '/posts/mostview?category=:category_name',
+  POSTS_BY_CATEGORY = '/posts/find?category=:category_name'
 }
 
-// Function to construct API URLs
 // Function to construct API URLs with parameters
 const buildApiUrl = (endpoint: API_ENDPOINTS, params: Record<string, string | number> = {}): string => {
   let apiUrl = apiBaseUrl + endpoint;
@@ -36,11 +36,15 @@ const buildApiUrl = (endpoint: API_ENDPOINTS, params: Record<string, string | nu
 const fetchData = async (endpoint: API_ENDPOINTS, params: Record<string, string | number> = {}): Promise<any> => {
   try {
     const url = buildApiUrl(endpoint, params);
-    const response = await axios.get(url);
+    const response: AxiosResponse = await axios.get(url);
     return response.data.data;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
+  } catch (error: any) {
+    const status = error.response.status
+    if (status === 404) {
+      return null
+    }
+    console.log(error)
+    throw Error("Something went wrong!") ;
   }
 };
 

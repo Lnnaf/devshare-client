@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
-import Header from "./components/header";
+import Header from "../components/header";
 
 const roboto = Work_Sans({
 	weight: "400",
@@ -26,13 +26,13 @@ export default function RootLayout({
 				<Header />
 				<main className="flex">
 					{/* left panel */}
-					<div className="flex-initial lg:w-1/4"></div>
+					<div className="lg:w-1/12 xl:w-2/12 2xl:w-3/12"></div>
 					{/* center panel */}
-					<div className="xl:w-10/12 w-full">
+					<div className="md:w-12/12 lg:w-10/12 xl:w-8/12 2xl:w-6/12  w-full">
 						{children}
 					</div>
 					{/* right paenl */}
-					<div className="flex-initial lg:w-1/4 h-screen"></div>
+					<div className="lg:w-1/12 xl:w-2/12 2xl:w-3/12  h-screen"></div>
 				</main>
 			</body>
 		</html>

@@ -10,5 +10,8 @@ export interface PostModel {
 	content: string;
 	title: string;
 	shortDescription: string;
-	categories: CategoryModel[]
+	viewed: number;
+	thumbImageUrl: string;
+	categories: CategoryModel[];
 }
+

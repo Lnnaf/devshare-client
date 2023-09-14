@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { PostModel } from "@/model/post.model";
 import { API_ENDPOINTS, fetchData } from "@/service/api/api.service";
-import PostDetail from "@/app/components/post_detail";
+import PostDetail from "@/components/post_detail";
 interface PostProps {
 	params: {
 		post_id: number;

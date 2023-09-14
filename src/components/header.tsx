@@ -8,8 +8,8 @@ const Header: FunctionComponent<Props> = () => {
 	return (
 		<header>
 			<nav className="h-14 flex">
-				<div className="lg:w-1/4 h-14"></div>
-				<div className="xl:w-10/12 w-full h-14 flex">
+				<div className="lg:w-1/12 xl:w-2/12 2xl:w-3/12 h-14"></div>
+				<div className="md:w-12/12 lg:w-8/12 xl:w-8/12 2xl:w-6/12 w-full h-14 flex">
 					{/* logo */}
 
 					<div className="w-3/12 flex justify-center items-center">
@@ -43,7 +43,7 @@ const Header: FunctionComponent<Props> = () => {
 						</div>
 					</div>
 				</div>
-				<div className="lg:w-1/4 h-14 "></div>
+				<div className="lg:w-1/12 xl:w-2/12 2xl:w-3/12 h-14 "></div>
 			</nav>
 		</header>
 	);
